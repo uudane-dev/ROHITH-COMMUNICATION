@@ -1,99 +1,150 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rohith Communication</title>
+<title>Rohith Communication | CSC Centre</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f6f9;
-    color:#333;
+background:#f5f7fa;
+color:#333;
 }
 
 header{
-    background:#0077cc;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
+background:linear-gradient(135deg,#004aad,#0099ff);
+color:white;
+text-align:center;
+padding:60px 20px;
 }
 
 header h1{
-    font-size:36px;
+font-size:45px;
+}
+
+header h2{
+margin-top:10px;
+font-size:24px;
 }
 
 header p{
-    margin-top:10px;
-    font-size:18px;
+margin-top:10px;
+font-size:18px;
 }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:30px 0;
+nav{
+background:#003366;
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+section{
+padding:60px 8%;
 }
 
 .section-title{
-    text-align:center;
-    margin-bottom:25px;
-    color:#0077cc;
+text-align:center;
+color:#004aad;
+margin-bottom:30px;
 }
 
 .services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    text-align:center;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-.card h3{
-    color:#0077cc;
-    margin-bottom:10px;
+.card:hover{
+transform:translateY(-5px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
 }
 
 .contact{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-.contact p{
-    margin:10px 0;
-    font-size:18px;
+input,textarea,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
 }
 
-.whatsapp-btn{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    padding:12px 20px;
-    text-decoration:none;
-    border-radius:5px;
-    margin-top:15px;
+button{
+background:#004aad;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:15px;
+background:#25D366;
+color:white;
+padding:12px 20px;
+text-decoration:none;
+border-radius:5px;
 }
 
 footer{
-    background:#0077cc;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:30px;
+background:#003366;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.hero{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 </style>
 </head>
@@ -101,72 +152,198 @@ footer{
 <body>
 
 <header>
-    <h1>Rohith Communication</h1>
-    <p>CSC Services | Banking Services | Xerox Centre</p>
+<h1>ROHITH COMMUNICATION</h1>
+<h2>ರೋಹಿತ್ ಕಮ್ಯುನಿಕೇಶನ್</h2>
+<p>CSC | Banking | Xerox | Online Services</p>
 </header>
 
-<div class="container">
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <h2 class="section-title">Our Services</h2>
+<section id="home">
+<div class="hero">
+<h2>Welcome to Rohith Communication</h2>
+<p>
+Your One Stop Solution for CSC Services, Banking Services,
+Revenue Department Services, Xerox, Printing and Online Applications.
+</p>
+</div>
+</section>
 
-    <div class="services">
+<section id="about">
+<h2 class="section-title">About Us | ನಮ್ಮ ಬಗ್ಗೆ</h2>
 
-        <div class="card">
-            <h3>CSC Services</h3>
-            <p>Government online services and applications.</p>
-        </div>
+<p align="center">
+Welcome to Rohith Communication, Madona Complex, Udane, Shiradi.
+We provide trusted CSC services, banking services,
+government services, printing and online application services.
+</p>
 
-        <div class="card">
-            <h3>Banking Services</h3>
-            <p>Cash Deposit, Withdrawal, Money Transfer & Mini Statement.</p>
-        </div>
+<br>
 
-        <div class="card">
-            <h3>Xerox & Printout</h3>
-            <p>Black & White, Color Printouts and Scanning.</p>
-        </div>
+<p align="center">
+ಉದನೆ, ಶಿರಾಡಿಯ ಮಡೋನಾ ಕಾಂಪ್ಲೆಕ್ಸ್‌ನಲ್ಲಿರುವ ರೋಹಿತ್ ಕಮ್ಯುನಿಕೇಶನ್‌ಗೆ ಸ್ವಾಗತ.
+ನಾವು CSC ಸೇವೆಗಳು, ಬ್ಯಾಂಕಿಂಗ್ ಸೇವೆಗಳು, ಜೆರಾಕ್ಸ್, ಪ್ರಿಂಟಿಂಗ್ ಹಾಗೂ ವಿವಿಧ
+ಸರಕಾರಿ ಆನ್‌ಲೈನ್ ಸೇವೆಗಳನ್ನು ಒದಗಿಸುತ್ತೇವೆ.
+</p>
+</section>
 
-        <div class="card">
-            <h3>PAN Card Services</h3>
-            <p>New PAN Card and PAN Correction Services.</p>
-        </div>
+<section id="services">
 
-        <div class="card">
-            <h3>Passport Photos</h3>
-            <p>Instant Passport Size Photos.</p>
-        </div>
+<h2 class="section-title">Our Services | ನಮ್ಮ ಸೇವೆಗಳು</h2>
 
-        <div class="card">
-            <h3>Revenue Services</h3>
-            <p>Caste, Income, Residence and Other Certificates.</p>
-        </div>
+<div class="services">
 
-    </div>
+<div class="card"><h3>CSC Services</h3></div>
+<div class="card"><h3>Aadhaar Print</h3></div>
+<div class="card"><h3>PAN Card</h3></div>
+<div class="card"><h3>Voter ID Services</h3></div>
+<div class="card"><h3>Passport Services</h3></div>
+<div class="card"><h3>Income Certificate</h3></div>
+<div class="card"><h3>Caste Certificate</h3></div>
+<div class="card"><h3>Residence Certificate</h3></div>
+<div class="card"><h3>Revenue Services</h3></div>
+<div class="card"><h3>Banking Services</h3></div>
+<div class="card"><h3>Cash Deposit</h3></div>
+<div class="card"><h3>Cash Withdrawal</h3></div>
+<div class="card"><h3>Money Transfer</h3></div>
+<div class="card"><h3>Mini Statement</h3></div>
+<div class="card"><h3>Account Opening</h3></div>
+<div class="card"><h3>Xerox</h3></div>
+<div class="card"><h3>Colour Printout</h3></div>
+<div class="card"><h3>Scanning</h3></div>
+<div class="card"><h3>Lamination</h3></div>
+<div class="card"><h3>Passport Photos</h3></div>
+<div class="card"><h3>Scholarship Applications</h3></div>
+<div class="card"><h3>Job Applications</h3></div>
+<div class="card"><h3>Rail Ticket Booking</h3></div>
+<div class="card"><h3>Bus Ticket Booking</h3></div>
+<div class="card"><h3>Insurance Services</h3></div>
+<div class="card"><h3>GST Services</h3></div>
 
 </div>
 
-<div class="container">
+</section>
 
-    <h2 class="section-title">Contact Us</h2>
+<section id="gallery">
 
-    <div class="contact">
-        <p><strong>Shop Name:</strong> Rohith Communication</p>
-        <p><strong>Address:</strong> Madona Complex, Udane, Shiradi</p>
-        <p><strong>Mobile:</strong> 9480636215</p>
-        <p><strong>Email:</strong> UUDANE@GMAIL.com</p>
+<h2 class="section-title">Photo Gallery</h2>
 
-        <a class="whatsapp-btn"
-           href="https://wa.me/919480636215"
-           target="_blank">
-           Chat on WhatsApp
-        </a>
-    </div>
+<div class="gallery">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
 
 </div>
+
+<p align="center">
+Upload your photos with names:
+gallery1.jpg, gallery2.jpg, gallery3.jpg, gallery4.jpg
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">UPI Payment</h2>
+
+<div class="hero">
+
+<img src="upiqr.jpg" width="250">
+
+<p>
+Upload your QR code image as <b>upiqr.jpg</b>
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<p><b>Shop Name:</b> Rohith Communication</p>
+<p><b>Address:</b> Madona Complex, Udane, Shiradi</p>
+<p><b>Mobile:</b> 9480636215</p>
+
+<form action="https://formsubmit.co/your-uudane@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="tel" name="phone" placeholder="Mobile Number" required>
+
+<input type="email" name="email" placeholder="Email">
+
+<select name="service">
+<option>Select Service</option>
+<option>CSC Service</option>
+<option>Banking Service</option>
+<option>PAN Card</option>
+<option>Aadhaar Service</option>
+<option>Xerox Service</option>
+</select>
+
+<textarea name="message" rows="5"
+placeholder="Enter your message"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<br>
+
+<a class="whatsapp"
+href="https://wa.me/919480636215">
+WhatsApp Chat
+</a>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Google Maps</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=Udane%20Karnataka&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="400"
+style="border:0;border-radius:10px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</section>
 
 <footer>
-    © 2026 Rohith Communication | All Rights Reserved
+
+<h3>ROHITH COMMUNICATION</h3>
+
+<p>
+Madona Complex, Udane, Shiradi
+</p>
+
+<p>
+Mobile: 9480636215
+</p>
+
+<p>
+© 2026 All Rights Reserved
+</p>
+
 </footer>
 
 </body>
 </html>
+```
