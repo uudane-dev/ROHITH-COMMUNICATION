@@ -1,349 +1,237 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rohith Communication | CSC Centre</title>
-
+<meta name="theme-color" content="#fff8df">
+<meta name="description" content="Rohith Communication, Udane, Shiradi — CSC, banking assistance, government applications, printing and online services.">
+<title>Rohith Communication | CSC & Online Services</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#f5f7fa;
-color:#333;
-}
-
-header{
-background:linear-gradient(135deg,#004aad,#0099ff);
-color:white;
-text-align:center;
-padding:60px 20px;
-}
-
-header h1{
-font-size:45px;
-}
-
-header h2{
-margin-top:10px;
-font-size:24px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
-
-nav{
-background:#003366;
-padding:15px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:bold;
-}
-
-section{
-padding:60px 8%;
-}
-
-.section-title{
-text-align:center;
-color:#004aad;
-margin-bottom:30px;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:10px;
-}
-
-.contact{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-input,textarea,select{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-button{
-background:#004aad;
-color:white;
-padding:12px 25px;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-.whatsapp{
-display:inline-block;
-margin-top:15px;
-background:#25D366;
-color:white;
-padding:12px 20px;
-text-decoration:none;
-border-radius:5px;
-}
-
-footer{
-background:#003366;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-.hero{
-background:white;
-padding:30px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
+:root{--gold:#f6b900;--gold-dark:#d99b00;--ink:#2b2115;--muted:#6e6254;--cream:#fff8df;--paper:#fff;--line:#eee4d2;--navy:#342718;--green:#168447;--shadow:0 18px 45px rgba(65,45,10,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Arial,"Noto Sans Kannada",sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,92%);margin:auto}
+.topbar{background:#342718;color:#fff8df;font-size:13px;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(60,40,10,.08)}
+.navrow{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:230px}
+.logo{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#2b2115;font-weight:900;font-size:20px;box-shadow:0 5px 14px #f6b90055}
+.brand strong{display:block;font-size:18px;line-height:1.2;letter-spacing:.2px}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;font-weight:700;margin-top:4px}
+nav{display:flex;align-items:center;gap:26px;font-size:14px;font-weight:700}
+nav a:hover{color:var(--gold-dark)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:#21190c;border:0;border-radius:999px;padding:13px 22px;font-weight:800;font-size:14px;cursor:pointer;box-shadow:0 6px 14px #e5a90024;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#ffca2b}
+.btn.light{background:#fff;border:1px solid var(--line);box-shadow:none}
+.menu-btn{display:none;border:1px solid var(--line);background:white;border-radius:10px;padding:8px 12px;font-size:20px}
+.hero{background:linear-gradient(120deg,#fff9e5 0%,#fff0b5 100%);overflow:hidden}
+.hero-grid{min-height:500px;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:55px;padding:58px 0}
+.location{display:inline-flex;align-items:center;gap:8px;border:1px solid #f2d58b;background:#fffdf5;border-radius:999px;padding:7px 14px;font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:18px}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.04;letter-spacing:-1.8px;max-width:650px}
+h1 span{color:#e8aa00}
+.hero-copy p{font-size:17px;color:#554633;max-width:590px;margin:22px 0 26px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;font-size:13px;color:#5d503c}
+.trust span:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;background:#ffe39a;border-radius:50%;margin-right:7px;color:#765000;font-weight:900}
+.hero-art{position:relative;min-height:330px;display:grid;place-items:center}
+.orbit{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#fff 5%,#ffe18a 100%);border:10px solid #fff;box-shadow:0 25px 55px #a27b2b2b;display:grid;place-items:center;position:relative}
+.building{width:75%;height:68%;background:#fff;border-radius:16px 16px 8px 8px;box-shadow:0 10px 22px #5d431b22;position:relative;overflow:hidden;border:2px solid #f1d58b}
+.building-top{height:27%;background:var(--gold);display:grid;place-items:center;font-weight:900;letter-spacing:1px;font-size:12px}
+.building-window{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:15px}
+.building-window i{height:46px;border-radius:5px;background:#e7f0f4;border:2px solid #b8d3df}
+.counter{height:28px;background:#d7a74b;margin:0 12px;border-radius:4px}
+.person{position:absolute;bottom:15%;right:14%;font-size:44px;filter:drop-shadow(0 4px 2px #0002)}
+.float-card{position:absolute;background:white;border-radius:16px;padding:13px 17px;box-shadow:var(--shadow);display:flex;align-items:center;gap:10px;font-size:12px;max-width:230px}
+.float-card strong{display:block;font-size:13px}
+.float-card.one{bottom:17px;left:0}
+.float-card.two{top:18px;right:0}
+.float-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:#fff0bc;font-size:20px}
+section{padding:78px 0}
+.section-kicker{text-transform:uppercase;letter-spacing:2.5px;color:#a76e00;font-size:11px;font-weight:900;margin-bottom:8px}
+.section-heading{font-size:clamp(28px,3vw,40px);line-height:1.2;margin-bottom:15px;letter-spacing:-.7px}
+.section-heading span{color:#e4a600}
+.section-intro{color:var(--muted);max-width:700px}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.about-visual{min-height:300px;background:linear-gradient(145deg,#fff5d1,#fffdf6);border-radius:28px;display:grid;place-items:center;position:relative;overflow:hidden;border:1px solid #f4e4b4}
+.about-visual .bigicon{font-size:100px;filter:drop-shadow(0 12px 10px #5a390c18)}
+.about-visual .mini{position:absolute;background:white;padding:12px 16px;border-radius:14px;box-shadow:var(--shadow);font-weight:800}
+.about-visual .mini.a{left:18px;bottom:20px}.about-visual .mini.b{right:18px;top:20px}
+.about-copy p{color:var(--muted);margin:12px 0}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.about-points div{background:#fffaf0;border:1px solid #f1e5ce;border-radius:12px;padding:12px;font-weight:700;font-size:13px}
+.services-section{background:#fffdf7}
+.section-top{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.service-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px;min-height:150px;transition:.2s}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#f0d17a}
+.service-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#fff2c8;font-size:23px;margin-bottom:14px}
+.service-card h3{font-size:16px;margin-bottom:5px}
+.service-card p{font-size:12px;color:var(--muted)}
+.note{font-size:12px;color:var(--muted);margin-top:18px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}.gallery-tile{min-height:145px;border:1px dashed #e2c77c;border-radius:16px;background:linear-gradient(145deg,#fff8df,#fff);display:grid;place-items:center;text-align:center;padding:15px;color:#76603a}.gallery-tile span{font-size:34px;display:block}.upi-box{margin-top:25px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.upi-box p{font-size:13px;color:var(--muted);max-width:620px}
+.why-card{padding:22px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.why-card .service-icon{margin-bottom:10px}
+.why-card h3{font-size:17px;margin-bottom:6px}
+.why-card p{font-size:14px;color:var(--muted)}
+.contact-section{background:linear-gradient(120deg,#fff8e2,#fff1bd)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
+.contact-details{margin-top:25px;display:grid;gap:14px}
+.contact-item{display:flex;gap:12px;align-items:flex-start}
+.contact-item .service-icon{flex-shrink:0;margin:0}
+.contact-item p{color:var(--muted);font-size:14px}
+.contact-form{background:#fff;padding:26px;border-radius:22px;box-shadow:var(--shadow)}
+.contact-form h3{font-size:22px;margin-bottom:5px}
+.contact-form>p{color:var(--muted);font-size:13px;margin-bottom:15px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:12px;font-weight:800;display:block;margin-bottom:5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #e4dccd;border-radius:10px;background:#fffdf9;font:inherit;font-size:14px;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid #f6b90055;border-color:#e5b12b}
+.field{margin-bottom:12px}
+textarea{min-height:95px;resize:vertical}
+.full{grid-column:1/-1}
+.form-note{font-size:11px!important;margin-top:10px;color:#756958!important}
+.map-placeholder{margin-top:24px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+footer{background:#342718;color:#fff7df;padding:30px 0}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer p{font-size:13px;color:#e0d2b6}
+footer a{color:#ffcf3d;font-weight:700}
+@media(max-width:900px){nav{gap:14px}.nav-cta{display:none}.hero-grid{gap:20px}.services{grid-template-columns:repeat(3,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{gap:25px}}
+@media(max-width:700px){.topbar .wrap{justify-content:center;text-align:center}.navrow{min-height:68px}.brand{min-width:0}.brand strong{font-size:15px}.brand small{font-size:9px}.menu-btn{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:18px 4%;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:11px 0;border-bottom:1px solid #f5eee1}.hero-grid{grid-template-columns:1fr;padding:48px 0 40px}.hero-art{min-height:300px;order:-1}.hero-copy{text-align:center}.hero-copy p{margin-left:auto;margin-right:auto}.actions,.trust{justify-content:center}.location{margin-left:auto;margin-right:auto}section{padding:56px 0}.about-grid,.contact-grid{grid-template-columns:1fr}.about-visual{min-height:230px}.services{grid-template-columns:repeat(2,1fr);gap:12px}.service-card{padding:17px 14px;min-height:145px}.section-top{display:block}.section-top .btn{margin-top:16px}.why-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.map-placeholder{align-items:flex-start;flex-direction:column}.upi-box{align-items:flex-start;flex-direction:column}}
+@media(max-width:380px){.services{grid-template-columns:1fr}.float-card{transform:scale(.88)}}
 </style>
 </head>
-
 <body>
-
+<div class="topbar"><div class="wrap"><span>📍 Madona Complex, Udane, Shiradi</span><span>CSC • Banking Assistance • Printing • Online Applications</span></div></div>
 <header>
-<h1>ROHITH COMMUNICATION</h1>
-<h2>ರೋಹಿತ್ ಕಮ್ಯುನಿಕೇಶನ್</h2>
-<p>CSC | Banking | Xerox | Online Services</p>
+  <div class="wrap navrow">
+    <a class="brand" href="#home" aria-label="Rohith Communication home"><span class="logo">RC</span><span><strong>ROHITH COMMUNICATION</strong><small>DIGITAL SEVA CENTRE</small></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#about">About Us</a><a href="#services">Services</a><a href="#why">Why Choose Us</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn nav-cta" href="https://wa.me/919480636215">☎ Contact Us</a>
+  </div>
 </header>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<section id="home">
-<div class="hero">
-<h2>Welcome to Rohith Communication</h2>
-<p>
-Your One Stop Solution for CSC Services, Banking Services,
-Revenue Department Services, Xerox, Printing and Online Applications.
-</p>
-</div>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="location">⌖ UDAANE, SHIRADI • KARNATAKA</div>
+      <h1>Your Local Partner for <span>Digital Services</span></h1>
+      <p>One convenient place for CSC services, government applications, banking assistance, Xerox, printing and everyday online services.</p>
+      <div class="actions"><a class="btn" href="#services">Explore Services <span aria-hidden="true">→</span></a><a class="btn light" href="#contact">Visit Our Centre</a></div>
+      <div class="trust"><span>Friendly guidance</span><span>Local support</span><span>Many services, one place</span></div>
+    </div>
+    <div class="hero-art" aria-label="Illustration of a digital service centre">
+      <div class="orbit"><div class="building"><div class="building-top">DIGITAL SEVA</div><div class="building-window"><i></i><i></i><i></i><i></i></div><div class="counter"></div></div><div class="person">🧑🏽‍💻</div></div>
+      <div class="float-card one"><span class="float-icon">✓</span><span><strong>Helpful assistance</strong><span>Here in your community</span></span></div>
+      <div class="float-card two"><span class="float-icon">💻</span><span><strong>Online services</strong><span>Guidance for applications</span></span></div>
+    </div>
+  </div>
 </section>
-
 <section id="about">
-<h2 class="section-title">About Us | ನಮ್ಮ ಬಗ್ಗೆ</h2>
-
-<p align="center">
-Welcome to Rohith Communication, Madona Complex, Udane, Shiradi.
-We provide trusted CSC services, banking services,
-government services, printing and online application services.
-</p>
-
-<br>
-
-<p align="center">
-ಉದನೆ, ಶಿರಾಡಿಯ ಮಡೋನಾ ಕಾಂಪ್ಲೆಕ್ಸ್‌ನಲ್ಲಿರುವ ರೋಹಿತ್ ಕಮ್ಯುನಿಕೇಶನ್‌ಗೆ ಸ್ವಾಗತ.
-ನಾವು CSC ಸೇವೆಗಳು, ಬ್ಯಾಂಕಿಂಗ್ ಸೇವೆಗಳು, ಜೆರಾಕ್ಸ್, ಪ್ರಿಂಟಿಂಗ್ ಹಾಗೂ ವಿವಿಧ
-ಸರಕಾರಿ ಆನ್‌ಲೈನ್ ಸೇವೆಗಳನ್ನು ಒದಗಿಸುತ್ತೇವೆ.
-</p>
+  <div class="wrap about-grid">
+    <div class="about-visual"><span class="bigicon">🏪</span><span class="mini a">🤝 Local support</span><span class="mini b">⭐ Customer care</span></div>
+    <div class="about-copy"><div class="section-kicker">ABOUT OUR CENTRE</div><h2 class="section-heading">Welcome to <span>Rohith Communication</span></h2>
+      <p>Rohith Communication, located at Madona Complex, Udane, Shiradi, helps customers access a range of CSC, government, banking assistance, printing and online application services.</p>
+      <p>ಉದನೆ, ಶಿರಾಡಿಯ ಮಡೋನಾ ಕಾಂಪ್ಲೆಕ್ಸ್‌ನಲ್ಲಿರುವ ರೋಹಿತ್ ಕಮ್ಯುನಿಕೇಶನ್‌ಗೆ ಸ್ವಾಗತ. CSC ಸೇವೆಗಳು, ಸರ್ಕಾರಿ ಅರ್ಜಿಗಳು, ಬ್ಯಾಂಕಿಂಗ್ ಸಹಾಯ, ಜೆರಾಕ್ಸ್, ಪ್ರಿಂಟಿಂಗ್ ಮತ್ತು ವಿವಿಧ ಆನ್‌ಲೈನ್ ಸೇವೆಗಳಿಗೆ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ.</p>
+      <div class="about-points"><div>✓ Clear guidance</div><div>✓ Convenient local service</div><div>✓ Kannada & English support</div><div>✓ Multiple services in one place</div></div>
+    </div>
+  </div>
 </section>
-
-<section id="services">
-
-<h2 class="section-title">Our Services | ನಮ್ಮ ಸೇವೆಗಳು</h2>
-
-<div class="services">
-
-<div class="card"><h3>CSC Services</h3></div>
-<div class="card"><h3>Aadhaar Print</h3></div>
-<div class="card"><h3>PAN Card</h3></div>
-<div class="card"><h3>Voter ID Services</h3></div>
-<div class="card"><h3>Passport Services</h3></div>
-<div class="card"><h3>Income Certificate</h3></div>
-<div class="card"><h3>Caste Certificate</h3></div>
-<div class="card"><h3>Residence Certificate</h3></div>
-<div class="card"><h3>Revenue Services</h3></div>
-<div class="card"><h3>Banking Services</h3></div>
-<div class="card"><h3>Cash Deposit</h3></div>
-<div class="card"><h3>Cash Withdrawal</h3></div>
-<div class="card"><h3>Money Transfer</h3></div>
-<div class="card"><h3>Mini Statement</h3></div>
-<div class="card"><h3>Account Opening</h3></div>
-<div class="card"><h3>Xerox</h3></div>
-<div class="card"><h3>Colour Printout</h3></div>
-<div class="card"><h3>Scanning</h3></div>
-<div class="card"><h3>Lamination</h3></div>
-<div class="card"><h3>Passport Photos</h3></div>
-<div class="card"><h3>Scholarship Applications</h3></div>
-<div class="card"><h3>Job Applications</h3></div>
-<div class="card"><h3>Rail Ticket Booking</h3></div>
-<div class="card"><h3>Bus Ticket Booking</h3></div>
-<div class="card"><h3>Insurance Services</h3></div>
-<div class="card"><h3>GST Services</h3></div>
-
-</div>
-
+<section class="services-section" id="services">
+  <div class="wrap">
+    <div class="section-top"><div><div class="section-kicker">WHAT WE OFFER</div><h2 class="section-heading">Our Services <span>| ನಮ್ಮ ಸೇವೆಗಳು</span></h2><p class="section-intro">Choose a service to discuss your requirements with our centre.</p></div><a class="btn light" href="https://wa.me/919480636215">Ask About a Service →</a></div>
+    <div class="services">
+      <article class="service-card"><div class="service-icon">🪪</div><h3>CSC Services</h3><p>Common Service Centre assistance</p></article>
+      <article class="service-card"><div class="service-icon">🆔</div><h3>Aadhaar Print</h3><p>Print-related assistance</p></article>
+      <article class="service-card"><div class="service-icon">🧾</div><h3>PAN Card</h3><p>PAN application guidance</p></article>
+      <article class="service-card"><div class="service-icon">🗳️</div><h3>Voter ID</h3><p>Voter services assistance</p></article>
+      <article class="service-card"><div class="service-icon">🛂</div><h3>Passport Services</h3><p>Application guidance</p></article>
+      <article class="service-card"><div class="service-icon">📄</div><h3>Certificates</h3><p>Income, caste and residence</p></article>
+      <article class="service-card"><div class="service-icon">🏛️</div><h3>Revenue Services</h3><p>Government application support</p></article>
+      <article class="service-card"><div class="service-icon">🏦</div><h3>Banking Assistance</h3><p>Banking service guidance</p></article>
+      <article class="service-card"><div class="service-icon">💸</div><h3>Money Transfer</h3><p>Transfer and payment assistance</p></article>
+      <article class="service-card"><div class="service-icon">📑</div><h3>Mini Statement</h3><p>Banking-related assistance</p></article>
+      <article class="service-card"><div class="service-icon">🖨️</div><h3>Xerox & Printing</h3><p>Black-and-white and colour print</p></article>
+      <article class="service-card"><div class="service-icon">📷</div><h3>Scanning & Photos</h3><p>Scan, passport photos and copies</p></article>
+      <article class="service-card"><div class="service-icon">📚</div><h3>Scholarships</h3><p>Scholarship application support</p></article>
+      <article class="service-card"><div class="service-icon">💼</div><h3>Job Applications</h3><p>Online application assistance</p></article>
+      <article class="service-card"><div class="service-icon">🚆</div><h3>Rail Ticket Booking</h3><p>Ticket booking assistance</p></article>
+      <article class="service-card"><div class="service-icon">🛡️</div><h3>Insurance & GST</h3><p>Service information and guidance</p></article>
+      <article class="service-card"><div class="service-icon">🚌</div><h3>Bus Ticket Booking</h3><p>Ticket booking assistance</p></article>
+      <article class="service-card"><div class="service-icon">📎</div><h3>Lamination</h3><p>Document finishing service</p></article>
+    </div>
+    <p class="note">Service availability and eligibility may vary. Please contact the centre before visiting for a specific application.</p>
+  </div>
 </section>
-
 <section id="gallery">
-
-<h2 class="section-title">Photo Gallery</h2>
-
-<div class="gallery">
-
-<img src="gallery1.jpg">
-<img src="gallery2.jpg">
-<img src="gallery3.jpg">
-<img src="gallery4.jpg">
-
-</div>
-
-<p align="center">
-Upload your photos with names:
-gallery1.jpg, gallery2.jpg, gallery3.jpg, gallery4.jpg
-</p>
-
+  <div class="wrap">
+    <div class="section-kicker">OUR CENTRE</div><h2 class="section-heading">Photo Gallery <span>| ಫೋಟೋ ಗ್ಯಾಲರಿ</span></h2>
+    <p class="section-intro">Add real photos of your shop, service counter and printing facilities to help visitors recognise the centre.</p>
+    <div class="gallery-grid">
+      <div class="gallery-tile"><div><span>🏪</span><strong>Our Centre</strong><p style="font-size:12px">Add shop photo</p></div></div>
+      <div class="gallery-tile"><div><span>💻</span><strong>Digital Services</strong><p style="font-size:12px">Add service photo</p></div></div>
+      <div class="gallery-tile"><div><span>🖨️</span><strong>Printing & Xerox</strong><p style="font-size:12px">Add printer photo</p></div></div>
+      <div class="gallery-tile"><div><span>🤝</span><strong>Customer Support</strong><p style="font-size:12px">Add centre photo</p></div></div>
+    </div>
+    <p class="note">Your repository currently shows only index.html and CNAME, so the earlier gallery1.jpg–gallery4.jpg and upiqr.jpg files do not appear to be uploaded yet.</p>
+    <div class="upi-box"><div><div class="section-kicker">DIGITAL PAYMENTS</div><h3>UPI Payment / UPI ಪಾವತಿ</h3><p>When you upload your own UPI QR image to the GitHub repository, this section can display it for customers. Only use the QR code belonging to your shop.</p></div><a class="btn light" href="https://wa.me/919480636215">Ask about payment →</a></div>
+  </div>
 </section>
-
-<section>
-
-<h2 class="section-title">UPI Payment</h2>
-
-<div class="hero">
-
-<img src="upiqr.jpg" width="250">
-
-<p>
-Upload your QR code image as <b>upiqr.jpg</b>
-</p>
-
-</div>
-
+<section id="why">
+  <div class="wrap"><div class="section-kicker">WHY VISIT US</div><h2 class="section-heading">Support you can <span>reach locally</span></h2><p class="section-intro">We aim to make everyday digital tasks easier with clear explanations and convenient local assistance.</p>
+    <div class="why-grid">
+      <article class="why-card"><div class="service-icon">🧭</div><h3>Step-by-step guidance</h3><p>Get help understanding the process and documents needed for your application.</p></article>
+      <article class="why-card"><div class="service-icon">📍</div><h3>Local convenience</h3><p>Visit us at Madona Complex, Udane, Shiradi for assistance close to your community.</p></article>
+      <article class="why-card"><div class="service-icon">💬</div><h3>Contact before visiting</h3><p>Message us to ask about service availability, required documents or timings.</p></article>
+    </div>
+  </div>
 </section>
-
-<section id="contact">
-
-<h2 class="section-title">Contact Us</h2>
-
-<div class="contact">
-
-<p><b>Shop Name:</b> Rohith Communication</p>
-<p><b>Address:</b> Madona Complex, Udane, Shiradi</p>
-<p><b>Mobile:</b> 9480636215</p>
-
-<form action="https://formsubmit.co/your-uudane@gmail.com" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="tel" name="phone" placeholder="Mobile Number" required>
-
-<input type="email" name="email" placeholder="Email">
-
-<select name="service">
-<option>Select Service</option>
-<option>CSC Service</option>
-<option>Banking Service</option>
-<option>PAN Card</option>
-<option>Aadhaar Service</option>
-<option>Xerox Service</option>
-</select>
-
-<textarea name="message" rows="5"
-placeholder="Enter your message"></textarea>
-
-<button type="submit">Submit</button>
-
-</form>
-
-<br>
-
-<a class="whatsapp"
-href="https://wa.me/919480636215">
-WhatsApp Chat
-</a>
-
-</div>
-
+<section class="contact-section" id="contact">
+  <div class="wrap contact-grid">
+    <div><div class="section-kicker">GET IN TOUCH</div><h2 class="section-heading">Visit our centre <span>| ಸಂಪರ್ಕಿಸಿ</span></h2><p class="section-intro">Have a question about a service? Contact Rohith Communication before your visit.</p>
+      <div class="contact-details">
+        <div class="contact-item"><span class="service-icon">📍</span><div><strong>Address</strong><p>Madona Complex, Udane, Shiradi, Karnataka</p></div></div>
+        <div class="contact-item"><span class="service-icon">📞</span><div><strong>Phone</strong><p><a href="tel:+919480636215">94806 36215</a></p></div></div>
+        <div class="contact-item"><span class="service-icon">🟢</span><div><strong>WhatsApp</strong><p>Send us a message about the service you need.</p></div></div>
+      </div>
+      <div class="map-placeholder"><div><strong>Find us in Udane, Shiradi</strong><p style="font-size:13px;color:#6e6254">Madona Complex, Karnataka</p></div><a class="btn light" target="_blank" rel="noopener" href="https://maps.google.com/?q=Madona+Complex+Udane+Shiradi">Open Google Maps ↗</a></div>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <h3>Message us on WhatsApp</h3><p>Fill in your details and WhatsApp will open with your message ready to send.</p>
+      <div class="form-grid">
+        <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Enter your name"></div>
+        <div class="field"><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Your number (optional)"></div>
+        <div class="field full"><label for="service">Service you need *</label><select id="service" name="service" required><option value="">Choose a service</option><option>CSC Services</option><option>Aadhaar Print</option><option>PAN Card</option><option>Voter ID</option><option>Passport Services</option><option>Income / Caste / Residence Certificate</option><option>Banking Assistance</option><option>Xerox / Printing / Scanning</option><option>Scholarship / Job Application</option><option>Rail / Bus Ticket Booking</option><option>Other</option></select></div>
+        <div class="field full"><label for="message">Your message</label><textarea id="message" name="message" placeholder="Tell us briefly what help you need"></textarea></div>
+        <div class="field full"><button class="btn" type="submit" style="width:100%">Continue to WhatsApp →</button></div>
+      </div>
+      <p class="form-note">This form opens WhatsApp; it does not store your details on this website.</p>
+    </form>
+  </div>
 </section>
-
-<section>
-
-<h2 class="section-title">Google Maps</h2>
-
-<iframe
-src="https://maps.google.com/maps?q=Udane%20Karnataka&t=&z=15&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="400"
-style="border:0;border-radius:10px;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
-
-</section>
-
-<footer>
-
-<h3>ROHITH COMMUNICATION</h3>
-
-<p>
-Madona Complex, Udane, Shiradi
-</p>
-
-<p>
-Mobile: 9480636215
-</p>
-
-<p>
-© 2026 All Rights Reserved
-</p>
-
-</footer>
-
+</main>
+<footer><div class="wrap footer-row"><div><strong>ROHITH COMMUNICATION</strong><p>Digital Seva Centre • Madona Complex, Udane, Shiradi</p></div><div><p>Phone: 94806 36215</p><p>© <span id="year"></span> Rohith Communication. All rights reserved.</p></div><a href="#home">Back to top ↑</a></div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const mainNav=document.getElementById('mainNav');
+menuBtn.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
+mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const service=document.getElementById('service').value;
+  const message=document.getElementById('message').value.trim();
+  const text=`Hello Rohith Communication,%0A%0AMy name: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone||'Not provided')}%0AService: ${encodeURIComponent(service)}%0AMessage: ${encodeURIComponent(message||'Please contact me about this service.')}`;
+  window.open('https://wa.me/919480636215?text='+text,'_blank','noopener');
+});
+</script>
 </body>
 </html>
-```
