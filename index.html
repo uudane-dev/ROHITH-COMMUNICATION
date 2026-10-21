@@ -37,7 +37,13 @@ h1 span{color:#e8aa00}
 .trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;font-size:13px;color:#5d503c}
 .trust span:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;background:#ffe39a;border-radius:50%;margin-right:7px;color:#765000;font-weight:900}
 .hero-art{position:relative;min-height:330px;display:grid;place-items:center}
-.orbit{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#fff 5%,#ffe18a 100%);border:10px solid #fff;box-shadow:0 25px 55px #a27b2b2b;display:grid;place-items:center;position:relative}
+.orbit .shop-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
 .building{width:75%;height:68%;background:#fff;border-radius:16px 16px 8px 8px;box-shadow:0 10px 22px #5d431b22;position:relative;overflow:hidden;border:2px solid #f1d58b}
 .building-top{height:27%;background:var(--gold);display:grid;place-items:center;font-weight:900;letter-spacing:1px;font-size:12px}
 .building-window{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:15px}
@@ -127,7 +133,13 @@ footer a{color:#ffcf3d;font-weight:700}
       <div class="trust"><span>Friendly guidance</span><span>Local support</span><span>Many services, one place</span></div>
     </div>
     <div class="hero-art" aria-label="Illustration of a digital service centre">
-      <div class="orbit"><div class="building"><div class="building-top">DIGITAL SEVA</div><div class="building-window"><i></i><i></i><i></i><i></i></div><div class="counter"></div></div><div class="person">🧑🏽‍💻</div></div>
+      <div class="orbit">
+  <img
+  src="shop-photo.jpg"
+  alt="Rohith Communication CSC Centre"
+  class="shop-photo"
+>
+</div>
       <div class="float-card one"><span class="float-icon">✓</span><span><strong>Helpful assistance</strong><span>Here in your community</span></span></div>
       <div class="float-card two"><span class="float-icon">💻</span><span><strong>Online services</strong><span>Guidance for applications</span></span></div>
     </div>
